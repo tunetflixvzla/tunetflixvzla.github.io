@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta Tag -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Realizar Pedido | Tu Netflix Vzla</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./img/logo-tu-netflix-vzla.png" type="image/x-icon">
+
+    <!-- Estilos Css -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Descripcion -->
+    <meta content='Tu Netflix Vzla, Realiza tu pedido aqui' name='description' />
+    <meta content="https://tunetflixvzla.github.io/img/logo-tu-netflix-vzla.png" name="image" />
+    <meta content="index, follow" name="robots" />
+    <meta content="Tu Netflix Vzla" name="keywords" />
+
+    <!-- Estilos Css Formulario -->
+    <link type="text/css" rel="stylesheet" href="./css/5e6b428acc8c4e222d1beb91.css" />
+    <link type="text/css" rel="stylesheet" href="./css/payment_styles.css" />
+    <link type="text/css" rel="stylesheet" href="./css/payment_feature.css" />
+    <style type="text/css" id="form-designer-style">
+        /* Injected CSS Code */
+        .form-label.form-label-auto {
+
+            display: inline-block;
+            float: left;
+            text-align: left;
+
+        }
+
+        /* Injected CSS Code */
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- Ir Arriba -->
+    <div class="go-top">
+        <span class="fas fa-angle-up"></span>
+    </div>
+
+
+    <!-- Menu de Navegacion -->
+    <header id="header">
+        <nav class="menu">
+            <div class="logo-box">
+                <h1><a href="index.html">Tu Netflix Vzla</a></h1>
+                <span class="btn-menu"><i class="fas fa-bars"></i></span>
+            </div>
+
+            <div class="list-container">
+                <ul class="lists">
+                    <li><a href="./">Inicio</a></li>
+                    <li><a href="./estrenos">Estrenos</a></li>
+                    <li><a href="./#Planes">Planes</a></li>
+                    <li><a href="./#Promociones">Promociones</a></li>
+                    <li><a href="https://www.instagram.com/tunetflixvzla" target="_blank">Instagram</a></li>
+                    <li><a href="https://wa.me/584121864828" target="_blank">Whatsapp</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Imagen Header -->
+    <div class="img-header" id="Inicio" style="height: 65vh;background: url(./img/img2.jpg);background-attachment: fixed;background-position: center;background-size: cover;">
+        <div class="welcome">
+            <h1>Realiza Tu Pedido</h1>
+            <hr>
+            <!-- <p>Nuestros Productos</p> -->
+            <!-- <button id="abajo">Ver Estrenos</button> -->
+        </div>
+        <div class="skew-abajo"></div>
+    </div>
+
+
+
+    </header>
+
+    <!-- Estilos Css Adicionales -->
+    <style>
+        .form-label.form-label-auto {
+            color: #fff;
+        }
+
+        .form-error-message {
+            color: #fff;
+        }
+
+        #subHeader_10,
+        #header_10 {
+            color: #fff;
+        }
+
+        .form-line .jf-required {
+            color: #fff;
+        }
+
+        .payment_footer {
+            color: #fff;
+        }
+
+        .form-line {
+            color: #fff;
+        }
+
+        #header_1 {
+            color: #fff;
+        }
+
+        .form-dropdown {
+            color: #fff;
+        }
+
+        .form-line-active {
+            background: none;
+        }
+
+        .formulario-de-pedido {
+            padding: 30px;
+            width: 70%;
+            margin: auto;
+            border: 2px solid #d5dae8;
+        }
+
+        @media screen and (max-width:874px) {
+
+            .formulario-de-pedido {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width:854px) {
+
+            .formulario-de-pedido {
+                width: 99%;
+                border: none;
+            }
+        }
+
+        @media screen and (max-width:682px) {
+
+            .formulario-de-pedido {
+                width: 100%;
+            }
+        }
+    </style>
+    <!-- Fin - Estilos Css Adicionales -->
+
+
+    <!-- Mensaje Pedido Realizado -->
+    <div id="mensaje-pedido-realizado" class="mensaje-pedido-realizado"
+        style="text-align: center;padding: 15px;margin-top: 100px;margin-bottom: 370px;display: none;">
+        <h2 style="color: #fff;">Tu pedido fue enviado con exito</h2>
+        <p style="color:rgba(255, 255, 255, 0.801);">le responderemos lo mas pronto posible, en un lapso no mayor a 10
+            minutos.
+            minutos.</p>
+        <button onclick="realizar_nuevo_pedido()" type="button"
+            style="padding: 7px;border: none;margin-top: 20px;background: #3065f8;color: #fff;border-radius: 5px;cursor: pointer;font-size: 15px;">Realizar
+            Nuevo Pedido</button>
+    </div>
+    <!-- Fin - Mensaje Pedido Realizado -->
+    
+
+    <!-- Formulario De Pedido -->
+    <div class="formulario-de-pedido" id="formulario-de-pedido">
+
+        <form class="jotform-form daniel-form" action="https://submit.jotform.com/submit/210609057175050/" method="post"
+            name="form_210609057175050" id="210609057175050" accept-charset="utf-8" autocomplete="on">
+            <input type="hidden" name="formID" value="210609057175050" />
+            <input type="hidden" id="JWTContainer" value="" />
+            <input type="hidden" id="cardinalOrderNumber" value="" />
+            <div role="main" class="form-all">
+                <ul class="form-section page-section">
+                    <li id="cid_1" class="form-input-wide" data-type="control_head">
+
+                        <!-- Header Formulario -->
+                        <!-- <div class="form-header-group  header-large">
+                            <div class="header-text httal htvam">
+                                <h1 id="header_1" class="form-header" data-component="header">
+                                    Tu Netflix Vzla
+                                </h1>
+                            </div>
+                        </div> -->
+
+                    </li>
+
+                    <!-- Productos -->
+                    <li class="form-line card-3col" data-type="control_payment" id="id_6" data-payment="true">
+                        <label class="form-label form-label-top category-enabled" id="label_6" for="input_6"> Mis
+                            Productos </label>
+                        <div id="cid_6" class="form-input-wide" data-layout="full">
+                            <div data-wrapper-react="true">
+                                <div class="filter-container">
+                                    <div class="multi-select-dropdown category-title-enabled hasSelectAll"
+                                        id="payment-category-dropdown">
+                                        <div class="dropdown-container">
+                                            <div class="select-area">
+                                                <span class="dropdown-hint">
+                                                    Categoria:
+                                                </span>
+                                                <span class="selected-values">
+                                                    Todas
+                                                </span>
+                                                <i class="icon">
+                                                </i>
+                                            </div>
+                                            <div class="select-content">
+                                                <div class="options">
+
+                                                    <div class="option selected">
+                                                        <input type="checkbox" checked="" value="All" />
+                                                        <span>
+                                                            Todas
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="option ">
+                                                        <input type="checkbox" value="2001" />
+                                                        <span>
+                                                            Planes
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="option ">
+                                                        <input type="checkbox" value="2002" />
+                                                        <span>
+                                                            Promociones
+                                                        </span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="simple_fpc" data-payment_type="payment"
+                                    data-component="payment1" value="6" />
+                                <input type="hidden" name="payment_total_checksum" id="payment_total_checksum"
+                                    data-component="payment2" />
+                                <div id="image-overlay" class="overlay-content" style="display:none">
+                                    <img id="current-image" />
+                                    <span class="lb-prev-button">
+                                        prev
+                                    </span>
+                                    <span class="lb-next-button">
+                                        next
+                                    </span>
+                                    <span class="lb-close-button">
+                                        ( X )
+                                    </span>
+                                    <span class="image-overlay-product-container">
+                                        <ul class="form-overlay-item" hasicon="false" hasimages="false">
+                                        </ul>
+                                        <ul class="form-overlay-item" hasicon="false" hasimages="true" iconvalue="">
+                                            <li class="image-overlay-image">
+                                                <img
+                                                    src="https://tunetflixvzla.github.io/img/netflix-2175501.jpg" />
+                                            </li>
+                                        </ul>
+                                        <ul class="form-overlay-item" hasicon="false" hasimages="true" iconvalue="">
+                                            <li class="image-overlay-image">
+                                                <img
+                                                    src="https://tunetflixvzla.github.io/img/Disney-Plus-Streaming-Peliculas-e1552032724278.jpg" />
+                                            </li>
+                                        </ul>
+                                        <ul class="form-overlay-item" hasicon="false" hasimages="true" iconvalue="">
+                                            <li class="image-overlay-image">
+                                                <img
+                                                    src="https://tunetflixvzla.github.io/img/primevideo-seo-logo-square.png" />
+                                            </li>
+                                        </ul>
+                                        <ul class="form-overlay-item" hasicon="false" hasimages="false">
+                                        </ul>
+                                        <ul class="form-overlay-item" hasicon="false" hasimages="true" iconvalue="">
+                                            <li class="image-overlay-image">
+                                                <img
+                                                    src="https://tunetflixvzla.github.io/img/Amazon-Prime-Video-Netflix-1024x580.jpg" />
+                                            </li>
+                                        </ul>
+                                        <ul class="form-overlay-item" hasicon="false" hasimages="true" iconvalue="">
+                                            <li class="image-overlay-image">
+                                                <img
+                                                    src="https://tunetflixvzla.github.io/img/disneymasprimevideo.jpg" />
+                                            </li>
+                                        </ul>
+                                        <ul class="form-overlay-item" hasicon="false" hasimages="true" iconvalue="">
+                                            <li class="image-overlay-image">
+                                                <img
+                                                    src="https://tunetflixvzla.github.io/img/Netflix-Prime-Video-Disney-Plus.jpg" />
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </div>
+
+                                <!-- Producto - Planes -->
+                                <div data-wrapper-react="true">
+                                    <span class="form-product-category-item  " category="2001">
+                                        <b>
+                                            Planes
+                                        </b>
+                                        <span class="selected-items-icon">
+                                        </span>
+                                    </span>
+
+                                    <!-- Producto 1 (Netflix) -->
+                                    <span
+                                        class="form-product-item hover-product-item on_col1 show_image show_desc show_option new_ui"
+                                        categories="2001" active-category="2001" pid="1000">
+                                        <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                                            <div class="p_col">
+                                                <div class="p_checkbox">
+                                                    <input type="checkbox" class="form-checkbox  form-product-input"
+                                                        id="input_6_1000" name="q6_misProductos[][id]" value="1000" />
+                                                    <div class="checked">
+                                                    </div>
+                                                    <div class="select_border">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- IMG Producto (Netflix) -->
+                                            <div class="p_image">
+                                                <div class="image_area form-product-image-with-options"
+                                                    style="background-image:url(./img/netflix-2175501.jpg)">
+                                                    <div class="image_zoom">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div for="input_6_1000" class="form-product-container">
+                                                <span data-wrapper-react="true">
+                                                    <div class="title_description">
+                                                        <span class="form-product-name" id="product-name-input_6_1000">
+                                                            Netflix
+                                                        </span>
+                                                        <span class="form-product-description"
+                                                            id="product-name-description-input_6_1000">
+                                                            Te Traemos para ti el Servicio de Streaming Netflix.
+                                                        </span>
+                                                    </div>
+                                                    <span class="form-product-details">
+                                                        <b>
+                                                            <span data-wrapper-react="true">
+                                                                $
+                                                                <span id="input_6_1000_price">
+                                                                    2.50
+                                                                </span>
+                                                            </span>
+                                                        </b>
+                                                    </span>
+                                                </span>
+                                                <span class="form-sub-label-container" style="vertical-align:top">
+                                                    <label class="form-sub-label" for="input_6_quantity_1000_0"
+                                                        style="min-height:13px" aria-hidden="false">Pantallas:</label>
+                                                    <span class="select_cont">
+                                                        <select class="form-dropdown"
+                                                            name="q6_misProductos[special_1000][item_0]"
+                                                            id="input_6_quantity_1000_0">
+                                                            <option value="1"> 1 </option>
+                                                            <option value="2"> 2 </option>
+                                                            <option value="3"> 3 </option>
+                                                            <option value="4"> 4 </option>
+                                                        </select>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <!-- Fin Producto 1 (Netflix) -->
+
+                                    <div class="p_item_separator ">
+                                    </div>
+
+                                    <!-- Producto 2 (Disney) -->
+                                    <span
+                                        class="form-product-item hover-product-item on_col2 show_image show_desc show_option new_ui"
+                                        categories="2001" active-category="2001" pid="1001">
+                                        <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                                            <div class="p_col">
+                                                <div class="p_checkbox">
+                                                    <input type="checkbox" class="form-checkbox  form-product-input"
+                                                        id="input_6_1001" name="q6_misProductos[][id]" value="1001" />
+                                                    <div class="checked">
+                                                    </div>
+                                                    <div class="select_border">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- IMG Producto (Disney) -->
+                                            <div class="p_image">
+                                                <div class="image_area form-product-image-with-options"
+                                                    style="background-image:url(./img/Disney-Plus-Streaming-Peliculas-e1552032724278.jpg)">
+                                                    <div class="image_zoom">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div for="input_6_1001" class="form-product-container">
+                                                <span data-wrapper-react="true">
+                                                    <div class="title_description">
+                                                        <span class="form-product-name" id="product-name-input_6_1001">
+                                                            Disney+
+                                                        </span>
+                                                        <span class="form-product-description"
+                                                            id="product-name-description-input_6_1001">
+                                                            Te Traemos para ti el Servicio de Streaming Disney+.
+                                                        </span>
+                                                    </div>
+                                                    <span class="form-product-details">
+                                                        <b>
+                                                            <span data-wrapper-react="true">
+                                                                $
+                                                                <span id="input_6_1001_price">
+                                                                    2.50
+                                                                </span>
+                                                            </span>
+                                                        </b>
+                                                    </span>
+                                                </span>
+                                                <span class="form-sub-label-container" style="vertical-align:top">
+                                                    <label class="form-sub-label" for="input_6_quantity_1001_0"
+                                                        style="min-height:13px" aria-hidden="false">Pantallas:</label>
+                                                    <span class="select_cont">
+                                                        <select class="form-dropdown"
+                                                            name="q6_misProductos[special_1001][item_0]"
+                                                            id="input_6_quantity_1001_0">
+                                                            <option value="1"> 1 </option>
+                                                            <option value="2"> 2 </option>
+                                                            <option value="3"> 3 </option>
+                                                            <option value="4"> 4 </option>
+                                                            <option value="5"> 5 </option>
+                                                        </select>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <!-- Fin Producto 2 (Disney) -->
+
+                                    <div class="p_item_separator ">
+                                    </div>
+
+                                    <!-- Producto 3 (Amazon Prime Video) -->
+                                    <span
+                                        class="form-product-item hover-product-item on_col3 show_image show_desc show_option new_ui"
+                                        categories="2001" active-category="2001" pid="1002">
+                                        <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                                            <div class="p_col">
+                                                <div class="p_checkbox">
+                                                    <input type="checkbox" class="form-checkbox  form-product-input"
+                                                        id="input_6_1002" name="q6_misProductos[][id]" value="1002" />
+                                                    <div class="checked">
+                                                    </div>
+                                                    <div class="select_border">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- IMG Producto (Amazon Prime Video) -->
+                                            <div class="p_image">
+                                                <div class="image_area form-product-image-with-options"
+                                                    style="background-image:url(./img/primevideo-seo-logo-square.png)">
+                                                    <div class="image_zoom">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div for="input_6_1002" class="form-product-container">
+                                                <span data-wrapper-react="true">
+                                                    <div class="title_description">
+                                                        <span class="form-product-name" id="product-name-input_6_1002">
+                                                            Amazon Prime Video
+                                                        </span>
+                                                        <span class="form-product-description"
+                                                            id="product-name-description-input_6_1002">
+                                                            Te Traemos para ti el Servicio de Streaming Prime Video.
+                                                        </span>
+                                                    </div>
+                                                    <span class="form-product-details">
+                                                        <b>
+                                                            <span data-wrapper-react="true">
+                                                                $
+                                                                <span id="input_6_1002_price">
+                                                                    1.50
+                                                                </span>
+                                                            </span>
+                                                        </b>
+                                                    </span>
+                                                </span>
+                                                <span class="form-sub-label-container" style="vertical-align:top">
+                                                    <label class="form-sub-label" for="input_6_quantity_1002_0"
+                                                        style="min-height:13px" aria-hidden="false">Pantallas:</label>
+                                                    <span class="select_cont">
+                                                        <select class="form-dropdown"
+                                                            name="q6_misProductos[special_1002][item_0]"
+                                                            id="input_6_quantity_1002_0">
+                                                            <option value="1"> 1 </option>
+                                                            <option value="2"> 2 </option>
+                                                            <option value="3"> 3 </option>
+                                                        </select>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <!-- Fin Producto 3 (Amazon Prime Video) -->
+
+                                    <div class="p_item_separator last_p_seperator">
+                                    </div>
+
+                                    <!-- Producto - Promociones -->
+                                    <span class="form-product-category-item  last_p_category" category="2002">
+                                        <b>
+                                            Promociones
+                                        </b>
+                                        <span class="selected-items-icon">
+                                        </span>
+                                    </span>
+
+                                    <!-- Promocion 1 (Netflix Y Prime Video) -->
+                                    <span
+                                        class="form-product-item hover-product-item on_col1 show_image show_desc new_ui"
+                                        categories="2002" active-category="2002" pid="1003">
+                                        <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                                            <div class="p_col">
+                                                <div class="p_checkbox">
+                                                    <input type="checkbox" class="form-checkbox  form-product-input"
+                                                        id="input_6_1003" name="q6_misProductos[][id]" value="1003" />
+                                                    <div class="checked">
+                                                    </div>
+                                                    <div class="select_border">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- IMG Promocion 1 -->
+                                            <div class="p_image">
+                                                <div class="image_area form-product-image-with-options"
+                                                    style="background-image:url(./img/Amazon-Prime-Video-Netflix-1024x580.jpg)">
+                                                    <div class="image_zoom">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div for="input_6_1003" class="form-product-container">
+                                                <span data-wrapper-react="true">
+                                                    <div class="title_description">
+                                                        <span class="form-product-name" id="product-name-input_6_1003">
+                                                            Promocion 1
+                                                        </span>
+                                                        <span class="form-product-description"
+                                                            id="product-name-description-input_6_1003">
+                                                            Tu Netflix Vzla Te trea esta estupenda promocion: una
+                                                            pantalla de Netflix + una de Prime Video por tan solo 3$
+                                                        </span>
+                                                    </div>
+                                                    <span class="form-product-details">
+                                                        <b>
+                                                            <span data-wrapper-react="true">
+                                                                $
+                                                                <span id="input_6_1003_price">
+                                                                    3.00
+                                                                </span>
+                                                            </span>
+                                                        </b>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <!-- Fin Promocion 1 (Netflix Y Prime Video) -->
+
+                                    <div class="p_item_separator ">
+                                    </div>
+
+                                    <!-- Promocion 2 (Disney+ Y Prime Video) -->
+                                    <span
+                                        class="form-product-item hover-product-item on_col2 show_image show_desc new_ui"
+                                        categories="2002" active-category="2002" pid="1005">
+                                        <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                                            <div class="p_col">
+                                                <div class="p_checkbox">
+                                                    <input type="checkbox" class="form-checkbox  form-product-input"
+                                                        id="input_6_1005" name="q6_misProductos[][id]" value="1005" />
+                                                    <div class="checked">
+                                                    </div>
+                                                    <div class="select_border">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- IMG Promocion 2 -->
+                                            <div class="p_image">
+                                                <div class="image_area form-product-image-with-options"
+                                                    style="background-image:url(./img/disneymasprimevideo.jpg)">
+                                                    <div class="image_zoom">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div for="input_6_1005" class="form-product-container">
+                                                <span data-wrapper-react="true">
+                                                    <div class="title_description">
+                                                        <span class="form-product-name" id="product-name-input_6_1005">
+                                                            Promocion 2
+                                                        </span>
+                                                        <span class="form-product-description"
+                                                            id="product-name-description-input_6_1005">
+                                                            Tu Netflix Vzla Te trea esta estupenda promocion: una
+                                                            pantalla de Disney+ + una de Prime Video por tan solo 3$
+                                                        </span>
+                                                    </div>
+                                                    <span class="form-product-details">
+                                                        <b>
+                                                            <span data-wrapper-react="true">
+                                                                $
+                                                                <span id="input_6_1005_price">
+                                                                    3.00
+                                                                </span>
+                                                            </span>
+                                                        </b>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <!-- Fin Promocion 2 (Disney+ Y Prime Video) -->
+
+                                    <div class="p_item_separator ">
+                                    </div>
+
+                                    <!-- Promocion 3 (Netflix, Disney+ Y Prime Video) -->
+                                    <span
+                                        class="form-product-item hover-product-item on_col3 show_image show_desc new_ui"
+                                        categories="2002" active-category="2002" pid="1004">
+                                        <div data-wrapper-react="true" class="form-product-item-detail new_ui">
+                                            <div class="p_col">
+                                                <div class="p_checkbox">
+                                                    <input type="checkbox" class="form-checkbox  form-product-input"
+                                                        id="input_6_1004" name="q6_misProductos[][id]" value="1004" />
+                                                    <div class="checked">
+                                                    </div>
+                                                    <div class="select_border">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- IMG Promocion 3 -->
+                                            <div class="p_image">
+                                                <div class="image_area form-product-image-with-options"
+                                                    style="background-image:url(./img/Netflix-Prime-Video-Disney-Plus.jpg)">
+                                                    <div class="image_zoom">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div for="input_6_1004" class="form-product-container">
+                                                <span data-wrapper-react="true">
+                                                    <div class="title_description">
+                                                        <span class="form-product-name" id="product-name-input_6_1004">
+                                                            Promocion 3
+                                                        </span>
+                                                        <span class="form-product-description"
+                                                            id="product-name-description-input_6_1004">
+                                                            Tu Netflix Vzla Te trea esta estupenda promocion: una
+                                                            pantalla de Netflix + Disney+ + una de Prime Video por tan
+                                                            solo 5$
+                                                        </span>
+                                                    </div>
+                                                    <span class="form-product-details">
+                                                        <b>
+                                                            <span data-wrapper-react="true">
+                                                                $
+                                                                <span id="input_6_1004_price">
+                                                                    5.00
+                                                                </span>
+                                                            </span>
+                                                        </b>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <!-- Fin Promocion 3 (Netflix, Disney+ Y Prime Video) -->
+
+                                    <!-- Contador Precio Total -->
+                                    <div class="payment_footer new_ui ">
+                                        <div class="total_area">
+                                            <div class="form-payment-total">
+                                                <div id="total-text">
+                                                    Total
+                                                </div>
+                                                <div class="form-payment-price">
+                                                    <span data-wrapper-react="true">
+                                                        $
+                                                        <span id="payment_total">
+                                                            0.00
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Formulario De Informacion Del Cliente -->
+                    <!-- Nombre Y Apellido -->
+                    <li class="form-line jf-required" data-type="control_fullname" id="id_3"
+                        data-compound-hint="Nombre,Apellido">
+                        <label class="form-label form-label-left form-label-auto" id="label_3" for="first_3">
+                            Nombre Y Apellido
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <div id="cid_3" class="form-input jf-required" data-layout="full">
+                            <div data-wrapper-react="true">
+                                <span class="form-sub-label-container" style="vertical-align:top"
+                                    data-input-type="first">
+                                    <input type="text" id="first_3" name="q3_nombreY[first]"
+                                        class="form-textbox validate[required]" size="10" value="" placeholder="Nombre"
+                                        data-component="first" aria-labelledby="label_3" required="" />
+                                </span>
+                                <span class="form-sub-label-container" style="vertical-align:top"
+                                    data-input-type="last">
+                                    <input type="text" id="last_3" name="q3_nombreY[last]"
+                                        class="form-textbox validate[required]" size="15" value=""
+                                        placeholder="Apellido" data-component="last" aria-labelledby="label_3"
+                                        required="" />
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Fin - Nombre Y Apellido -->
+
+                    <!-- Correo Electronico -->
+                    <li class="form-line jf-required" data-type="control_email" id="id_4">
+                        <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4">
+                            Correo Electronico
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <div id="cid_4" class="form-input jf-required" data-layout="half">
+                            <input type="email" id="input_4" name="q4_correoElectronico"
+                                class="form-textbox validate[required, Email]" style="width:310px" size="310" value=""
+                                placeholder="ejemplo@ejemplo.com" data-component="email" aria-labelledby="label_4"
+                                required="" />
+                        </div>
+                    </li>
+                    <!-- Fin - Correo Electronico -->
+
+                    <!-- Numero De Telefono -->
+                    <li class="form-line jf-required" data-type="control_phone" id="id_5"
+                        data-compound-hint="Código de área,Número de teléfono">
+                        <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5_area">
+                            Número de teléfono
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <div id="cid_5" class="form-input jf-required" data-layout="half">
+                            <div data-wrapper-react="true">
+                                <span class="form-sub-label-container" style="vertical-align:top"
+                                    data-input-type="areaCode">
+                                    <input type="tel" id="input_5_area" name="q5_numeroDe[area]"
+                                        class="form-textbox validate[required]" value="" placeholder="Código de área"
+                                        data-component="areaCode" aria-labelledby="label_5" required="" />
+                                    <span class="phone-separate" aria-hidden="true">
+                                         -
+                                    </span>
+                                    <label class="form-sub-label is-empty" for="input_5_area" id="sublabel_5_area"
+                                        style="min-height:13px" aria-hidden="false"> </label>
+                                </span>
+                                <span class="form-sub-label-container" style="vertical-align:top"
+                                    data-input-type="phone">
+                                    <input type="tel" id="input_5_phone" name="q5_numeroDe[phone]"
+                                        class="form-textbox validate[required]" value=""
+                                        placeholder="Número de teléfono" data-component="phone"
+                                        aria-labelledby="label_5" required="" />
+                                    <label class="form-sub-label is-empty" for="input_5_phone" id="sublabel_5_phone"
+                                        style="min-height:13px" aria-hidden="false"> </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Fin - Numero De Telefono -->
+
+                    <!-- Comentario Opcional -->
+                    <li class="form-line" data-type="control_textarea" id="id_7">
+                        <label class="form-label form-label-left form-label-auto" id="label_7" for="input_7"> Comentario
+                            (opcional) </label>
+                        <div id="cid_7" class="form-input" data-layout="full">
+                            <textarea id="input_7" class="form-textarea" name="q7_comentarioopcional"
+                                style="width:648px;height:163px" data-component="textarea"
+                                aria-labelledby="label_7"></textarea>
+                        </div>
+                    </li>
+                    <!-- Fin - Comentario Opcional -->
+
+                    <!-- ¿Que Forma De Pago Utilizara? -->
+                    <li class="form-line jf-required" data-type="control_radio" id="id_9">
+                        <label class="form-label form-label-left form-label-auto" id="label_9" for="input_9">
+                            ¿Que Forma De Pago Utilizara?
+                            <span class="form-required">
+                                *
+                            </span>
+                        </label>
+                        <div id="cid_9" class="form-input jf-required" data-layout="full">
+                            <div class="form-single-column" role="group" aria-labelledby="label_9"
+                                data-component="radio">
+                                <span class="form-radio-item" style="clear:left">
+                                    <span class="dragger-item">
+                                    </span>
+                                    <input type="radio" class="form-radio validate[required]" id="input_9_0"
+                                        name="q9_queForma" value="Transferencia Bancaria" required="" />
+                                    <label id="label_input_9_0" for="input_9_0"> Transferencia Bancaria </label>
+                                </span>
+                                <span class="form-radio-item" style="clear:left">
+                                    <span class="dragger-item">
+                                    </span>
+                                    <input type="radio" class="form-radio validate[required]" id="input_9_1"
+                                        name="q9_queForma" value="Pago Movil" required="" />
+                                    <label id="label_input_9_1" for="input_9_1"> Pago Movil </label>
+                                </span>
+                                <span class="form-radio-item" style="clear:left">
+                                    <span class="dragger-item">
+                                    </span>
+                                    <input type="radio" class="form-radio validate[required]" id="input_9_2"
+                                        name="q9_queForma" value="Paypal" required="" />
+                                    <label id="label_input_9_2" for="input_9_2"> Paypal </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Fin - ¿Que Forma De Pago Utilizara? -->
+
+                    <!-- Informacion -->
+                    <li id="cid_10" class="form-input-wide" data-type="control_head">
+                        <div class="form-header-group  header-default">
+                            <div class="header-text httal htvam">
+                                <h2 id="header_10" class="form-header" data-component="header">
+                                    Información
+                                </h2>
+                                <div id="subHeader_10" class="form-subHeader">
+                                    Después de que usted envié su información nuestro equipo le escribirán vía WhatsApp
+                                    a su numero solicitado, aprox en responderles 10 minutos.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Fin - Informacion -->
+
+                    <!-- Boton Enviar -->
+                    <li class="form-line" data-type="control_button" id="id_2">
+                        <div id="cid_2" class="form-input-wide" data-layout="full">
+                            <div data-align="auto"
+                                class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+                                <button id="input_2" type="submit"
+                                    class="form-submit-button submit-button jf-form-buttons jsTest-submitField"
+                                    data-component="button" data-content="">
+                                    Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Fin - Boton Enviar -->
+
+                    <li style="display:none">
+                        Should be Empty:
+                        <input type="text" name="website" value="" />
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- <script>
+                JotForm.showJotFormPowered = "new_footer";
+            </script>
+            <script>
+                JotForm.poweredByText = "Powered by JotForm";
+            </script> -->
+
+            <input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="210609057175050" />
+            <script type="text/javascript">
+                var all_spc = document.querySelectorAll("form[id='210609057175050'] .si" + "mple" + "_spc");
+                for (var i = 0; i < all_spc.length; i++) {
+                    all_spc[i].value = "210609057175050-210609057175050";
+                }
+            </script>
+
+            <!-- <div class="formFooter-heightMask">
+            </div> -->
+
+            <!-- Credito Jotform (Comentado Para Que No Aparescan En La Pagina)-->
+            <!-- <div class="formFooter f6">
+                <div class="formFooter-wrapper formFooter-leftSide">
+                    <a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=210609057175050&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le"
+                        target="_blank" class="formFooter-logoLink"><img class="formFooter-logo"
+                            src="https://cdn.jotfor.ms/assets/img/logo/logo-new@1x.png" alt="Jotform Logo"></a>
+                </div>
+                <div class="formFooter-wrapper formFooter-rightSide">
+                    <span class="formFooter-text">
+                        Now create your own JotForm - It's free!
+                    </span>
+                    <a class="formFooter-button"
+                        href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=210609057175050&utm_content=jotform_button&utm_campaign=powered_by_jotform_le"
+                        target="_blank">Create your own JotForm</a>
+                </div>
+            </div> -->
+
+        </form>
+
+    </div>
+    <!-- Fin Formulario De Pedido -->
+
+    <div class="espacio" style="margin-bottom: 120px;"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-text">
+            <p>&copy; Tu Netflix Vzla 2021 | Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+    <!-- Fin - Footer -->
+
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/35db202371.js"></script>
+    <script src="./js/app.js"></script>
+
+    <!-- Scripts Del Formulario -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.min.js"></script>
+    <script src="https://cdn.jotfor.ms/static/prototype.forms.js" type="text/javascript"></script>
+    <script src="https://cdn.jotfor.ms/static/jotform.forms.js?3.3.23617" type="text/javascript"></script>
+    <script type="text/javascript">
+        JotForm.init(function () {
+            productID = { "1": "input_6_1000", "2": "input_6_1001", "3": "input_6_1002", "5": "input_6_1003", "6": "input_6_1005", "7": "input_6_1004" };
+            paymentType = "product";
+            JotForm.setCurrencyFormat('USD', true, 'point');
+            JotForm.totalCounter({ "input_6_1000": { "price": "2.50", "quantityField": "input_6_quantity_1000_0" }, "input_6_1001": { "price": "2.50", "quantityField": "input_6_quantity_1001_0" }, "input_6_1002": { "price": "1.50", "quantityField": "input_6_quantity_1002_0" }, "input_6_1003": { "price": "3.00" }, "input_6_1005": { "price": "3.00" }, "input_6_1004": { "price": "5.00" } });
+            $$('.form-product-custom_quantity').each(function (el, i) { el.observe('blur', function () { isNaN(this.value) || this.value < 1 ? this.value = '0' : this.value = parseInt(this.value) }) });
+            $$('.form-product-custom_quantity').each(function (el, i) { el.observe('focus', function () { this.value == 0 ? this.value = '' : this.value }) });
+            JotForm.paymentCategoryHandler(true, true);
+            JotForm.handleProductLightbox();
+            setTimeout(function () {
+                $('input_4').hint('ejemplo@ejemplo.com');
+            }, 20);
+            if (window.JotForm && JotForm.accessible) $('input_7').setAttribute('tabindex', 0);
+            JotForm.setCustomHint('input_7', 'Type here...');
+            JotForm.newDefaultTheme = true;
+            JotForm.extendsNewTheme = false;
+            JotForm.newPaymentUIForNewCreatedForms = false;
+            JotForm.newPaymentUI = true;
+            JotForm.alterTexts({ "ageVerificationError": "Debe ser mayor de {minAge} años para enviar este formulario.", "alphabetic": "Este campo solo puede contener letras.", "alphanumeric": "Este campo solo puede contener letras y números.", "appointmentSelected": "Ha seleccionado {time} del {date}", "ccDonationMinLimitError": "La Cantidad Mínima es {minAmount} {currency}", "ccInvalidCVC": "El número CVC no es válido.", "ccInvalidExpireDate": "La fecha de expiración no es válida", "ccInvalidNumber": "El número de su tarjeta de crédito no es válido.", "ccMissingDetails": "Please fill up the credit card details.", "ccMissingDonation": "Favor ponga valores númericos en la cantidad a donar.", "ccMissingProduct": "Por favor seleccione al menos un producto.", "characterLimitError": "Demasiados caracteres. El límite es", "characterMinLimitError": "Muy pocos caracteres. El mínimum es", "confirmClearForm": "¿Está seguro que desea limpiar el formulario?", "confirmEmail": "El correo electrónico no coincide", "currency": "Este campo sólo puede contener valores de moneda.", "cyrillic": "Este campo solo puede contener caracteres cirílicos.", "dateInvalid": "Esta fecha no es valida. El formato de fecha es {format}", "dateInvalidSeparate": "Esta fecha no es válida. Ponga una {element} válida", "dateLimited": "Esta fecha no está disponible.", "disallowDecimals": "Por favor, introduzca un número entero.", "dragAndDropFilesHere_infoMessage": "Arrastre y suelte archivos aquí", "email": "Introduzca una dirección e-mail válida", "fillMask": "El valor de este campo debe llenar la mascara", "freeEmailError": "No se permiten cuentas de correo gratuitas", "generalError": "Existen errores en el formulario, por favor corríjalos antes de continuar.", "generalPageError": "Hay errores en esta página. Por favor, corríjalos antes de continuar.", "gradingScoreError": "El puntaje total debería ser sólo &amp;quot;menos que&amp;quot; o &amp;quot;igual que&amp;quot;", "incompleteFields": "Existen campos requeridos incompletos. Por favor complételos.", "inputCarretErrorA": "La entrada no debe ser inferior al valor mínimo:", "inputCarretErrorB": "La entrada debe ser menor al valor:", "lessThan": "Su puntuación debería ser menor o igual que", "maxDigitsError": "El máximo de dígitos permitido es", "maxFileSize_infoMessage": "Tamaño de Archivo Máx.", "maxSelectionsError": "The maximum number of selections allowed is ", "minSelectionsError": "El número mínimo de opciones obligatorias es", "multipleFileUploads_emptyError": "El fichero {file} está vacío; por favor, seleccione de nuevo los ficheros sin él.", "multipleFileUploads_fileLimitError": "Solo {fileLimit} carga de archivos permitida.", "multipleFileUploads_minSizeError": "{file} is demasiado pequeño, el tamaño mínimo de fichero es: {minSizeLimit}.", "multipleFileUploads_onLeave": "Se están cargando los ficheros, si cierras ahora, se cancelará dicha carga.", "multipleFileUploads_sizeError": "{file} es demasiado grande; el tamaño del archivo no debe superar los {sizeLimit}.", "multipleFileUploads_typeError": "El fichero {file} posee una extensión no permitida. Sólo están permitidas las extensiones {extensions}.", "multipleFileUploads_uploadFailed": "File upload failed, please remove it and upload the file again.", "noSlotsAvailable": "No hay cupos disponibles", "noUploadExtensions": "File has no extension file type (e.g. .txt, .png, .jpeg)", "numeric": "Este campo sólo admite valores numéricos.", "pastDatesDisallowed": "La fecha debe ser futura", "pleaseWait": "Por favor, espere ...", "required": "Este campo es obligatorio.", "requireEveryCell": "Se requieren todas las celdas.", "requireEveryRow": "Todas las filas son obligatorias.", "requireOne": "Al menos un campo requerido.", "restrictedDomain": "This domain is not allowed", "slotUnavailable": "{time} del {date} ha sido tomada. Favor seleccionar otro espacio.", "uploadExtensions": "Solo puede subir los siguientes archivos:", "uploadFilesize": "Tamaño del archivo no puede ser mayor que:", "uploadFilesizemin": "Tamañao de archivo no puede ser menos de:", "url": "Este campo solo contiene una URL válida.", "validateEmail": "You need to validate this e-mail", "wordLimitError": "Demasiadas palabras. El límite es", "wordMinLimitError": "Muy pocas palabras. El mínimo es" });
+            JotForm.alterTexts({ "couponApply": "Aplicar", "couponBlank": "Favor ingrese un cupón.", "couponChange": "", "couponEnter": "Introduzca Cupón", "couponExpired": "Cupón ha caducado. Por favor, intente otra.", "couponInvalid": "Coupon is invalid.", "couponValid": "El cupón es válido.", "shippingShipping": "Envío", "taxTax": "Impuesto", "totalSubtotal": "Subtotal", "totalTotal": "Total" }, true);
+            JotForm.clearFieldOnHide = "disable";
+            /*INIT-END*/
+        });
+
+        JotForm.prepareCalculationsOnTheFly([null, { "name": "tuNetflix", "qid": "1", "text": "Tu Netflix Vzla", "type": "control_head" }, { "name": "submit2", "qid": "2", "text": "Enviar", "type": "control_button" }, { "description": "", "name": "nombreY", "qid": "3", "text": "Nombre Y Apellido", "type": "control_fullname" }, { "description": "", "name": "correoElectronico", "qid": "4", "subLabel": "", "text": "Correo Electronico", "type": "control_email" }, { "description": "", "name": "numeroDe", "qid": "5", "text": "Numero de telefono", "type": "control_phone" }, { "description": "", "name": "misProductos", "qid": "6", "text": "Mis Productos", "type": "control_payment" }, { "description": "", "name": "comentarioopcional", "qid": "7", "subLabel": "", "text": "Comentario (opcional)", "type": "control_textarea" }, null, { "description": "", "name": "queForma", "qid": "9", "text": "¿Que Forma De Pago Utilizara?", "type": "control_radio" }, { "name": "informacion", "qid": "10", "text": "Informacion", "type": "control_head" }]);
+        setTimeout(function () {
+            JotForm.paymentExtrasOnTheFly([null, { "name": "tuNetflix", "qid": "1", "text": "Tu Netflix Vzla", "type": "control_head" }, { "name": "submit2", "qid": "2", "text": "Enviar", "type": "control_button" }, { "description": "", "name": "nombreY", "qid": "3", "text": "Nombre Y Apellido", "type": "control_fullname" }, { "description": "", "name": "correoElectronico", "qid": "4", "subLabel": "", "text": "Correo Electronico", "type": "control_email" }, { "description": "", "name": "numeroDe", "qid": "5", "text": "Numero de telefono", "type": "control_phone" }, { "description": "", "name": "misProductos", "qid": "6", "text": "Mis Productos", "type": "control_payment" }, { "description": "", "name": "comentarioopcional", "qid": "7", "subLabel": "", "text": "Comentario (opcional)", "type": "control_textarea" }, null, { "description": "", "name": "queForma", "qid": "9", "text": "¿Que Forma De Pago Utilizara?", "type": "control_radio" }, { "name": "informacion", "qid": "10", "text": "Informacion", "type": "control_head" }]);
+        }, 20); 
+    </script>
+
+</body>
+</html>
